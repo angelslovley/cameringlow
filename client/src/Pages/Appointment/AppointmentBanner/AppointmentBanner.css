@@ -1,0 +1,35 @@
+.my-selected:not([disabled]) { 
+  font-weight: bold; 
+  border: 2px solid currentColor;
+}
+.my-selected:hover:not([disabled]) { 
+  border-color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+}
+.my-today { 
+  font-weight: bold;
+  font-size: 140%; 
+  color: red;
+}
+
+
+
+
+.style_day_selected__wa6\+D, .style_day_selected__wa6\+D:focus-visible, .style_day_selected__wa6\+D:hover {
+    color: white;
+    opacity: 1;
+    background-color: red  !important;}
+
+
+.rdp {
+    --rdp-cell-size: 40px;
+    --rdp-accent-color: #201f1f5b;
+    --rdp-background-color: #e7edff;
+    /* Switch to dark colors for dark themes */
+    --rdp-accent-color-dark: #e10303 !important;
+    --rdp-background-color-dark: #700202 !important;
+    /* Outline border for focused elements */
+    --rdp-outline: 2px solid var(--rdp-accent-color);
+    /* Outline border for focused and selected elements */
+    --rdp-outline-selected: 2px solid rgba(0, 0, 0, 0.75);
+  }
