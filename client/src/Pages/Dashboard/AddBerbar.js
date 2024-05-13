@@ -28,7 +28,10 @@ const AddBerbar = () => {
                 const berbar = {
                     name: data.name, 
                     email: data.email,
-                    // specialty: data.specialty,
+                    phone: data?.phone,
+                    profession: data?.profession,
+                    education: data?.education,
+                    work: data?.work,
                     image: imgData.data.url
                 }
 
@@ -73,21 +76,39 @@ const AddBerbar = () => {
                     })} className="input text-red-500 input-bordered w-full max-w-xs" />
                     {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                 </div>
-                {/* <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className=" text-white label-text">Specialty</span></label>
-                    <select 
-                    {...register('specialty')}
-                    className=" bg bg-accent select input-bordered w-full max-w-xs">
-                        {
-                            specialties.map(specialty => <option
-                                key={specialty._id}
-                                value={specialty.name}
-                            >{specialty.name}</option>)
-                        }
-                        
-                        
-                    </select>
-                </div> */}
+
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text text-white">Phone Number</span></label>
+                    <input type="text" {...register("phone", {
+                        required: "Phone number is Required"
+                    })} className="input text-red-500 input-bordered w-full max-w-xs" />
+                    {errors.phone && <p className='text-red-500'>{errors.phone.message}</p>}
+                </div>
+
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text text-white">Profession</span></label>
+                    <input type="text" {...register("profession", {
+                        required: "Profession is Required"
+                    })} className="input text-red-500 input-bordered w-full max-w-xs" />
+                    {errors.profession && <p className='text-red-500'>{errors.profession.message}</p>}
+                </div>
+
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text text-white">Educational Details</span></label>
+                    <input type="text" {...register("education", {
+                        required: "Educational Details are Required"
+                    })} className="input text-red-500 input-bordered w-full max-w-xs" />
+                    {errors.education && <p className='text-red-500'>{errors.education.message}</p>}
+                </div>
+
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text text-white">Work Experience</span></label>
+                    <input type="text" {...register("work", {
+                        required: "Work experience is Required"
+                    })} className="input text-red-500 input-bordered w-full max-w-xs" />
+                    {errors.work && <p className='text-red-500'>{errors.work.message}</p>}
+                </div>
+               
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className=" text-white label-text">Photo</span></label>
                     <input type="file" {...register("image", {
